@@ -33,3 +33,9 @@ variable "sns_kms_encryption" {
   default     = false
   description = "Enabled KMS CMK encryption at rest for SNS Topic"
 }
+
+variable "runtime" {
+  type        = string
+  default     = "nodejs18.x"
+  description = "The node runtime version for the lambda. Check https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime for options."
+}
